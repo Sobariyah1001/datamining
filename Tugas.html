@@ -450,22 +450,49 @@ Nilai V4 =  7.9
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for i in range(0,150,1):</span>
-<span class="c1">#   if p.loc[i][&#39;SepalLengthCm&#39;] &gt; b and p.loc[i][&#39;SepalLengthCm&#39;] &lt; v1:</span>
-<span class="c1">#     p[&#39;Categorycal&#39;][i] = &quot;A&quot;</span>
-<span class="c1">#   elif p.loc[i][&#39;SepalLengthCm&#39;] &gt; v1 and p.loc[i][&#39;SepalLengthCm&#39;] &lt; v2:</span>
-<span class="c1">#     p[&#39;Categorycal&#39;][i] = &quot;B&quot;</span>
-<span class="c1">#   elif p.loc[i][&#39;SepalLengthCm&#39;] &gt; v2 and p.loc[i][&#39;SepalLengthCm&#39;] &lt; v3:</span>
-<span class="c1">#     p[&#39;Categorycal&#39;][i] = &quot;C&quot;</span>
-<span class="c1">#   else:</span>
-<span class="c1">#     p[&#39;Categorycal&#39;][i] = &quot;D&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">150</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="ow">and</span> <span class="n">p</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">v1</span><span class="p">:</span>
+    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span>
+  <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">v1</span> <span class="ow">and</span> <span class="n">p</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">v2</span><span class="p">:</span>
+    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;B&quot;</span>
+  <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">v2</span> <span class="ow">and</span> <span class="n">p</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">v3</span><span class="p">:</span>
+    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;C&quot;</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;D&quot;</span>
 <span class="n">p</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:3: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  This is separate from the ipykernel package so we can avoid doing imports until
+/usr/local/lib/python3.7/dist-packages/pandas/core/indexing.py:1732: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self._setitem_single_block(indexer, value, name)
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:5: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  &quot;&quot;&quot;
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:9: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  if __name__ == &#39;__main__&#39;:
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:7: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  import sys
+</pre></div>
+</div>
 <div class="output text_html">
-  <div id="df-f0db8b10-9f77-4fdf-822c-9712ea435469">
+  <div id="df-fe565708-73a7-4185-b363-494b30421b5b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -506,7 +533,7 @@ Nilai V4 =  7.9
     <tr>
       <th>1</th>
       <td>2</td>
-      <td>4.9</td>
+      <td>A</td>
       <td>3.0</td>
       <td>1.4</td>
       <td>0.2</td>
@@ -515,7 +542,7 @@ Nilai V4 =  7.9
     <tr>
       <th>2</th>
       <td>3</td>
-      <td>4.7</td>
+      <td>A</td>
       <td>3.2</td>
       <td>1.3</td>
       <td>0.2</td>
@@ -524,7 +551,7 @@ Nilai V4 =  7.9
     <tr>
       <th>3</th>
       <td>4</td>
-      <td>4.6</td>
+      <td>A</td>
       <td>3.1</td>
       <td>1.5</td>
       <td>0.2</td>
@@ -533,7 +560,7 @@ Nilai V4 =  7.9
     <tr>
       <th>4</th>
       <td>5</td>
-      <td>5.0</td>
+      <td>A</td>
       <td>3.6</td>
       <td>1.4</td>
       <td>0.2</td>
@@ -551,7 +578,7 @@ Nilai V4 =  7.9
     <tr>
       <th>145</th>
       <td>146</td>
-      <td>6.7</td>
+      <td>C</td>
       <td>3.0</td>
       <td>5.2</td>
       <td>2.3</td>
@@ -560,7 +587,7 @@ Nilai V4 =  7.9
     <tr>
       <th>146</th>
       <td>147</td>
-      <td>6.3</td>
+      <td>C</td>
       <td>2.5</td>
       <td>5.0</td>
       <td>1.9</td>
@@ -569,7 +596,7 @@ Nilai V4 =  7.9
     <tr>
       <th>147</th>
       <td>148</td>
-      <td>6.5</td>
+      <td>C</td>
       <td>3.0</td>
       <td>5.2</td>
       <td>2.0</td>
@@ -578,7 +605,7 @@ Nilai V4 =  7.9
     <tr>
       <th>148</th>
       <td>149</td>
-      <td>6.2</td>
+      <td>C</td>
       <td>3.4</td>
       <td>5.4</td>
       <td>2.3</td>
@@ -587,7 +614,7 @@ Nilai V4 =  7.9
     <tr>
       <th>149</th>
       <td>150</td>
-      <td>5.9</td>
+      <td>B</td>
       <td>3.0</td>
       <td>5.1</td>
       <td>1.8</td>
@@ -597,7 +624,7 @@ Nilai V4 =  7.9
 </table>
 <p>150 rows × 6 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f0db8b10-9f77-4fdf-822c-9712ea435469')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-fe565708-73a7-4185-b363-494b30421b5b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -648,12 +675,12 @@ Nilai V4 =  7.9
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f0db8b10-9f77-4fdf-822c-9712ea435469 button.colab-df-convert');
+          document.querySelector('#df-fe565708-73a7-4185-b363-494b30421b5b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f0db8b10-9f77-4fdf-822c-9712ea435469');
+          const element = document.querySelector('#df-fe565708-73a7-4185-b363-494b30421b5b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
