@@ -1,19 +1,19 @@
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
-    record_timing=False,
-  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 1204, in execute
+  File "/usr/local/lib/python3.8/dist-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.8/dist-packages/nbclient/client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/usr/local/lib/python3.7/dist-packages/nbclient/util.py", line 84, in wrapped
+  File "/usr/local/lib/python3.8/dist-packages/nbclient/util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/usr/local/lib/python3.7/dist-packages/nbclient/util.py", line 62, in just_run
+  File "/usr/local/lib/python3.8/dist-packages/nbclient/util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-  File "/usr/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
     return future.result()
-  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 664, in async_execute
-    cell, index, execution_count=self.code_cells_executed + 1
-  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 965, in async_execute_cell
+  File "/usr/local/lib/python3.8/dist-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.8/dist-packages/nbclient/client.py", line 965, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 862, in _check_raise_for_error
+  File "/usr/local/lib/python3.8/dist-packages/nbclient/client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -33,14 +33,14 @@ plt.imshow(img)
 [1;32m      4[0m [0mplt[0m[0;34m.[0m[0maxis[0m[0;34m([0m[0;34m'off'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      5[0m [0mplt[0m[0;34m.[0m[0mimshow[0m[0;34m([0m[0mimg[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/usr/local/lib/python3.7/dist-packages/matplotlib/image.py[0m in [0;36mimread[0;34m(fname, format)[0m
+[0;32m/usr/local/lib/python3.8/dist-packages/matplotlib/image.py[0m in [0;36mimread[0;34m(fname, format)[0m
 [1;32m   1462[0m             raise ValueError('Only know how to handle PNG; with Pillow '
 [1;32m   1463[0m                              'installed, Matplotlib can handle more images')
 [0;32m-> 1464[0;31m         [0;32mwith[0m [0mImage[0m[0;34m.[0m[0mopen[0m[0;34m([0m[0mfname[0m[0;34m)[0m [0;32mas[0m [0mimage[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m   1465[0m             [0;32mreturn[0m [0mpil_to_array[0m[0;34m([0m[0mimage[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   1466[0m     [0;32mfrom[0m [0mmatplotlib[0m [0;32mimport[0m [0m_png[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/usr/local/lib/python3.7/dist-packages/PIL/Image.py[0m in [0;36mopen[0;34m(fp, mode)[0m
+[0;32m/usr/local/lib/python3.8/dist-packages/PIL/Image.py[0m in [0;36mopen[0;34m(fp, mode)[0m
 [1;32m   2841[0m [0;34m[0m[0m
 [1;32m   2842[0m     [0;32mif[0m [0mfilename[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m-> 2843[0;31m         [0mfp[0m [0;34m=[0m [0mbuiltins[0m[0;34m.[0m[0mopen[0m[0;34m([0m[0mfilename[0m[0;34m,[0m [0;34m"rb"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
